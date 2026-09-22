@@ -10,4 +10,14 @@ function Skeleton({ className, ...props }: React.ComponentProps<'div'>) {
   )
 }
 
-export { Skeleton }
+function SkeletonCircle({ className, ...props }: React.ComponentProps<'div'>) {
+  return (
+    <div
+      data-slot="skeleton-circle"
+      className={cn('bg-accent animate-pulse rounded-full', className)}
+      {...props}
+    />
+  )
+}
+
+export { Skeleton, SkeletonCircle }
